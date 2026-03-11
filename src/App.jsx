@@ -1,86 +1,51 @@
+import { Routes, Route, Link } from 'react-router-dom'
 import './App.css'
+import Home from './pages/Home'
+import Skills from './pages/Skills'
 
 function App() {
   return (
-    <div className="min-h-screen p-8 flex flex-col">
-      {/* Industrial Header */}
-      <nav className="flex justify-between items-center border-b border-purple-500/20 pb-4 mb-20">
-        <span className="text-purple-500 font-bold tracking-widest text-sm">ALFREDO</span>
-        <div className="flex gap-6 text-[10px] uppercase tracking-widest text-gray-500">
-          <span className="hover:text-purple-400 cursor-pointer">01_Projects</span>
-          <span className="hover:text-purple-400 cursor-pointer">02_Stack</span>
-          <span className="hover:text-purple-400 cursor-pointer">03_Contact</span>
-        </div>
-      </nav>
+    <div className="relative min-h-screen bg-tech-dark font-mono overflow-x-hidden">
 
-      <main className="grow">
+      <div className="absolute inset-0 bg-grid pointer-events-none" />
 
-        {/* Home */}
-        <section className="flex flex-col items-center">
-          <div className="w-48 h-48 overflow-hidden border-2 border-purple-500/30 rounded-lg hover:-translate-y-1 transition-all">
-            <img src="/src/assets/Alfredo-Almirez.jpg" alt="Alfredo Almirez Image" className="rounded-lg" />
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="w-full h-32 bg-scanline-bar animate-scanline"></div>
+      </div>
+
+      <div className="relative z-10 flex flex-col min-h-screen p-8">
+        {/* Industrial Header */}
+        <nav className="flex justify-between items-center border-b border-purple-500/20 pb-4 mb-20">
+          <Link to="/"><span className="text-purple-500 font-bold tracking-widest text-sm">\ALFREDO/</span></Link>
+          <div className="flex gap-6 text-[10px] uppercase tracking-widest text-gray-500">
+            <Link to="/skills" className="hover:text-purple-400 cursor-pointer">Skills</Link>
+            <span className="hover:text-purple-400 cursor-pointer">Project</span>
+            <span className="hover:text-purple-400 cursor-pointer">Contact</span>
           </div>
+        </nav>
 
-          <div className="py-2 my-2 text-purple-400 font-mono text-xs uppercase tracking-widest animate-pulse">
-          // Backend Developer \\
-          </div>
-          <h1 className="text-7xl text-center font-black tracking-tighter leading-none my-3">
-            <span className="text-purple-600">A</span>LFREDO ALMIREZ
-          </h1>
-          <p className="max-w-md text-gray-500 text-sm leading-relaxed border-l border-purple-900 pl-4 my-3">
-            Focusing on backend development using React & Laravel
-          </p>
+        <main className="grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
 
-          {/* SKILLS */}
-          <section className="w-full max-w-4xl mt-20">
-            <div className="flex items-center gap-4 mb-8">
-              <h2 className="uppercase text-sm"><span className="text-purple-600">S</span>kills</h2>
-              <div className="h-px grow bg-purple-500/20"></div>
+            <Route path="/skills" element={<Skills />} />
+
+
+          </Routes>
+
+        </main>
+
+        <footer>
+          <div className="text-primary-lite border-t border-purple-500/20 text-center">
+            <div className="py-8 uppercase text-xs tracking-widest">
+              <span>© {new Date().getFullYear()} Copyright Reserved. Alfredo Almirez</span>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="rounded-sm border border-purple-500/10 p-4 bg-purple-500/5 hover:bg-purple-500/10 transition-all">
-                <h3 className="text-purple-400 font-mono text-sm mb-4 uppercase tracking-widest">Backend</h3>
-                <ul className="space-y-2 text-gray-400 font-mono text-sm">
-                  <li>Laravel</li>
-                  <li>PHP</li>
-                  <li>MySQL</li>
-                </ul>
-              </div>
-
-              <div className="rounded-sm border border-purple-500/10 p-4 bg-purple-500/5 hover:bg-purple-500/10 transition-all">
-                <h3 className="text-purple-400 font-mono text-sm mb-4 uppercase tracking-widest">Frontend</h3>
-                <ul className="space-y-2 text-gray-400 font-mono text-sm">
-                  <li>React.js</li>
-                  <li>Tailwind CSS</li>
-                  <li>JavaScript</li>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                </ul>
-              </div>
-
-              <div className="rounded-sm border border-purple-500/10 p-4 bg-purple-500/5 hover:bg-purple-500/10 transition-all">
-                <h3 className="text-purple-400 font-mono text-sm mb-4 uppercase tracking-widest">Tools</h3>
-                <ul className="space-y-2 text-gray-400 font-mono text-sm">
-                  <li>Git/Github</li>
-                  <li>Inertia.js</li>
-                  <li>Vercel</li>
-                  <li>InfinityFree</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-        </section>
-      </main>
-
-      <footer>
-        <div className="border-t border-purple-500/20 text-center">
-          <div className="py-8 uppercase text-xs tracking-widest">
-            <span>© {new Date().getFullYear()} Copyright Reserved. Alfredo Almirez</span>
           </div>
-        </div>
-      </footer>
-    </div>
+        </footer>
+
+
+      </div>
+    </div >
   )
 }
 

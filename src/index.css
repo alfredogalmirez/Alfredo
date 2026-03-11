@@ -1,14 +1,34 @@
 @import "tailwindcss";
 
-:root {
-  --color-primary: #f0f6fc;
-  --bg-color: #;
-  --text-color: #0d1117;
+@theme {
+  /* Define the custom animation */
+  --animation-scanline: scanline 8s linear infinite;
+
+  /* Define the keyframes */
+  @keyframes scanline {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(100vh); }
+  }
+
+  /* Define your industrial colors */
+  --color-tech-dark: #0d1117;
+  --color-primary-lite: #f0f6fc;
+  --color-tech-purple: #a855f7;
+  --color-tech-purple-light: #c084fc;
 }
 
-body {
-  margin: 0;
-  background: #0d1117;
-  color: #f0f6fc;
-  font-family: 'JetBrains Mono', 'Fire Code', monospace;
+@utility bg-grid {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(168, 85, 247, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(168, 85, 247, 0.05) 1px, transparent 1px);
+}
+
+@utility bg-scanline-bar {
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(168, 85, 247, 0.05) 50%,
+    transparent
+  );
 }
