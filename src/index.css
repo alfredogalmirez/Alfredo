@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #f0f6fc;
+  --bg-color: #;
+  --text-color: #0d1117;
+}
+
+body {
+  margin: 0;
+  background: #0d1117;
+  color: #f0f6fc;
+  font-family: 'JetBrains Mono', 'Fire Code', monospace;
+}
