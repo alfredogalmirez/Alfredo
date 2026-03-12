@@ -45,9 +45,9 @@ function App() {
               </div>
 
               <div className="flex flex-row gap-6">
-                <a href="https://www.linkedin.com/in/alfredoalmirez/" target="_blank"><img src="/public/linkedin.png" alt="Linkin Profile" className="w-5 h-5" /></a>
-                <a href="https://www.facebook.com/coyc0r/" target="_blank"><img src="/public/facebook.png" alt="Linkin Profile" className="w-5 h-5" /></a>
-                <a href="https://www.facebook.com/coyc0r/" target="_blank"><img src="/public/github.png" alt="Linkin Profile" className="w-5 h-5" /></a>
+                <a href="https://www.linkedin.com/in/alfredoalmirez/" target="_blank"><img src="/linkedin.png" alt="Linkin Profile" className="w-5 h-5" /></a>
+                <a href="https://www.facebook.com/coyc0r/" target="_blank"><img src="/facebook.png" alt="Linkin Profile" className="w-5 h-5" /></a>
+                <a href="https://www.facebook.com/coyc0r/" target="_blank"><img src="/github.png" alt="Linkin Profile" className="w-5 h-5" /></a>
               </div>
             </div>
           </footer>

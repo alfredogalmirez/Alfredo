@@ -12,7 +12,7 @@ const Home = () => {
 
   const projects = [
     { title: "Socials", description: "A Laravel + React social media platform with real-time features.", image: "/socials-project.png", link: "https://socials-webapp.vercel.app/" },
-    { title: "Ordifyr", description: "An e-commerce website with Paymongo API Integration.", image: "/ordifyr-project.png"},
+    { title: "Ordifyr", description: "An e-commerce website with Paymongo API Integration.", image: "/ordifyr-project.png", link: "https://ordifyr.infinityfree.me/"},
     { title: "TerFades Booking", description: "Barber's booking system made with Laravel + Blade." }
   ];
 
@@ -22,7 +22,7 @@ const Home = () => {
 
         {/* MY INFO */}
         <div className="w-48 h-48 overflow-hidden border-2 border-purple-500/30 rounded-lg hover:-translate-y-1 transition-all">
-          <img src="/public/Alfredo-Almirez.jpg" alt="Alfredo Almirez Image" className="w-full h-full object-cover" />
+          <img src="/Alfredo-Almirez.jpg" alt="Alfredo Almirez Image" className="w-full h-full object-cover" />
         </div>
 
         <div className="py-2 my-2 text-purple-400 font-mono text-xs uppercase tracking-widest hover:animate-glitch animate-pulse">
