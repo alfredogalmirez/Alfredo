@@ -2,7 +2,7 @@ import React from 'react'
 
 const SkillCard = ({ title, items }) => {
   return (
-    <div className="rounded-sm border border-purple-500/10 p-4 bg-purple-500/5 hover:bg-purple-500/10 transition-all">
+    <div className="rounded-sm border border-purple-500/10 p-4 bg-purple-500/5 hover:bg-purple-500/10 hover:-translate-y-1 transition-all">
       <h3 className="text-purple-400 font-mono text-sm text-center mb-4 uppercase tracking-widest">{title}</h3>
       <ul className="space-y-2 text-gray-400 text-center font-mono text-sm">
         {items.map((item, index) => (

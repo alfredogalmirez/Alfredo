@@ -4,10 +4,38 @@
   /* Define the custom animation */
   --animation-scanline: scanline 8s linear infinite;
 
+  --animate-glitch: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
+
   /* Define the keyframes */
   @keyframes scanline {
     from { transform: translateY(-100%); }
     to { transform: translateY(100vh); }
+  }
+
+  @keyframes glitch {
+    0% {
+      transform: translate(0);
+      text-shadow: -2px -2px #ff00c1, 2px 2px #00fff9;
+    }
+    20% {
+      transform: translate(-2px, 2px);
+      text-shadow: 2px -2px #ff00c1, -2px 2px #00fff9;
+    }
+    40% {
+      transform: translate(-2px, -2px);
+      text-shadow: -2px 2px #ff00c1, 2px -2px #00fff9;
+    }
+    60% {
+      transform: translate(2px, 2px);
+      text-shadow: 2px 2px #ff00c1, -2px -2px #00fff9;
+    }
+    80% {
+      transform: translate(2px, -2px);
+      text-shadow: -2px -2px #ff00c1, 2px 2px #00fff9;
+    }
+    100% {
+      transform: translate(0);
+    }
   }
 
   /* Define your industrial colors */
