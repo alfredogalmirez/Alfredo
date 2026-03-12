@@ -22,7 +22,7 @@ const Home = () => {
 
         {/* MY INFO */}
         <div className="w-48 h-48 overflow-hidden border-2 border-purple-500/30 rounded-lg hover:-translate-y-1 transition-all">
-          <img src="/src/assets/Alfredo-Almirez.jpg" alt="Alfredo Almirez Image" className="w-full h-full object-cover" />
+          <img src="/public/Alfredo-Almirez.jpg" alt="Alfredo Almirez Image" className="w-full h-full object-cover" />
         </div>
 
         <div className="py-2 my-2 text-purple-400 font-mono text-xs uppercase tracking-widest hover:animate-glitch animate-pulse">
